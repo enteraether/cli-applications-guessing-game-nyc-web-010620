@@ -6,9 +6,10 @@ def run_guessing_game
   user_num = gets.chomp
   if user_num == comp_gen_rndm_num
     puts "You guessed the correct number!"
-  elsif user_num != comp_gen_rndm_num
-    puts "Sorry! The computer guessed #{comp_gen_rndm_num}."
-  elsif user_num == exit
+  elsif user_num.downcase == exit
     puts "Goodbye!"
+  else
+    puts "Sorry! The computer guessed #{comp_gen_rndm_num}."
+
   end
 end
